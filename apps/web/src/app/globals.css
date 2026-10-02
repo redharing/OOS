@@ -1,0 +1,55 @@
+:root {
+  --ink: #10232b;
+  --muted: #4d5f66;
+  --ground: #f3f6f5;
+  --card: #ffffff;
+  --line: #d8e0df;
+  --water: #0b5c7a;
+  --water-dark: #083f55;
+  --water-tint: #e3f0f5;
+  --sos: #c2410c;
+  --sos-ink: #9a3412;
+  --sos-tint: #fdebdd;
+  --watch: #8a5a00;
+  --watch-tint: #fff6db;
+  --ok: #1d6b4f;
+  --ok-tint: #e3f2ea;
+
+  /* Station status on the map; differ in lightness as well as hue. */
+  --st-normal: #5aa9cc;
+  --st-watch: #e0a020;
+  --st-overflow: #c2410c;
+  --st-offline: #9aa9ae;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-plex-thai), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--water);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid var(--water);
+  outline-offset: 2px;
+}

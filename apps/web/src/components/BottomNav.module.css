@@ -1,0 +1,26 @@
+.nav {
+  margin-top: 12px;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  height: calc(68px + env(safe-area-inset-bottom));
+  padding: 6px 4px env(safe-area-inset-bottom);
+  background: var(--card);
+  border-top: 1px solid var(--line);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.item[aria-current="page"] {
+  color: var(--water);
+  font-weight: 600;
+}
