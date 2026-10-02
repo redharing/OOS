@@ -1,0 +1,227 @@
+.screen {
+  height: 100dvh;
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--ground);
+  overflow: hidden;
+}
+
+.header {
+  height: 64px;
+  flex-shrink: 0;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--water);
+}
+
+.place {
+  flex-grow: 1;
+  min-width: 0;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--ground);
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.place svg {
+  color: var(--water);
+  flex-shrink: 0;
+}
+
+.place span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mapWrap {
+  position: relative;
+  flex-grow: 1;
+  min-height: 220px;
+  background: #e4ebe7;
+}
+
+.legend {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  display: flex;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: 0 2px 8px rgba(16, 35, 43, 0.15);
+  font-size: 12px;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  border: 1.5px solid #fff;
+  box-shadow: 0 0 0 1px rgba(16, 35, 43, 0.25);
+}
+
+.dot[data-status="overflow"] { background: var(--st-overflow); }
+.dot[data-status="watch"] { background: var(--st-watch); }
+.dot[data-status="normal"] { background: var(--st-normal); }
+
+.locate {
+  position: absolute;
+  right: 12px;
+  bottom: 48px;
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  border: none;
+  background: var(--card);
+  color: var(--water);
+  box-shadow: 0 2px 8px rgba(16, 35, 43, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  margin: -24px 12px 0;
+  padding: 14px 16px;
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: 0 6px 20px rgba(16, 35, 43, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--water-tint);
+  color: var(--water-dark);
+}
+
+.pill[data-status="overflow"] { background: var(--sos-tint); color: var(--sos-ink); }
+.pill[data-status="watch"] { background: var(--watch-tint); color: var(--watch); }
+.pill[data-status="offline"] { background: var(--ground); color: var(--muted); }
+
+.headline {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.muted {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.source {
+  margin: 2px 0 0;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--muted);
+}
+
+.linkButton {
+  min-height: 44px;
+  padding: 0 4px;
+  border: none;
+  background: none;
+  color: var(--water);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.actions {
+  padding: 12px 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.sos,
+.primary,
+.secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.sos {
+  height: 60px;
+  border-radius: 18px;
+  background: var(--sos);
+  color: #fff;
+  font-size: 19px;
+}
+
+.actionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.primary,
+.secondary {
+  height: 52px;
+  border-radius: 16px;
+  font-size: 16px;
+}
+
+.primary {
+  background: var(--water);
+  color: #fff;
+}
+
+.secondary {
+  background: var(--card);
+  border: 1.5px solid var(--water);
+  color: var(--water);
+}
+
+.sos:hover { background: #a8380a; }
+.primary:hover { background: var(--water-dark); }
+.secondary:hover { background: var(--water-tint); }
